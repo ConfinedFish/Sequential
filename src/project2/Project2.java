@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package project2;
 
-/**
- *
- * @author Alex
- */
+import java.util.Random;
+
 public class Project2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Random random = new Random();
+        Sequence<Integer> integerSequence = new Sequence<>();
+        for (int i = 0; i < integerSequence.size(); i++) {
+            integerSequence.set(i, random.nextInt(500));
+        }
+        integerSequence.append(random.nextInt(500));
+        for (int i = 0; i < integerSequence.size(); i++){
+            System.out.print(integerSequence.get(i) + " ");
+        }
     }
-    
 }
