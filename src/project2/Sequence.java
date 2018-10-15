@@ -1,8 +1,8 @@
 package project2;
 @SuppressWarnings("unchecked")
 public class Sequence<E> {
-    private int size;
-    private Object[] data;
+    private final int size;
+    private final Object[] data;
     
     public Sequence(){
         this.size = 10;
@@ -17,7 +17,10 @@ public class Sequence<E> {
         return size;
     }
     void append(E element){
-        if (!(getLastPosition() < size)){
+        if (data[0] == null){
+            data[0] = element;
+        }
+        if ((getLastPosition() < size)){
             data [getLastPosition() + 1] = element;
         }
     }

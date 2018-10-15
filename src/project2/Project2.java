@@ -1,10 +1,6 @@
-
 package project2;
-
 import java.util.Random;
-
 public class Project2 {
-
     public static void main(String[] args) {
         Random random = new Random();
         Sequence<Integer> integerSequence = new Sequence<>();
